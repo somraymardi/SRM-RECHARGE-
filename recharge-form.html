@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recharge Form</title>
+  <style>
+    body { font-family: Arial; background: #f9f9f9; padding: 30px; }
+    form { background: #fff; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    input, select, button { width: 100%; padding: 10px; margin: 10px 0; }
+    button { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #45a049; }
+  </style>
+</head>
+<body>
+
+  <form action="recharge.php" method="POST">
+    <h2>Mobile Recharge</h2>
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" name="mobile" required pattern="\d{10}" placeholder="Enter 10 digit number">
+
+    <label for="operator_id">Operator:</label>
+    <select name="operator_id" required>
+      <option value="">-- Select Operator --</option>
+      <option value="1">Airtel</option>
+      <option value="3">Idea</option>
+      <option value="8">Jio</option>
+      <option value="21">Vodafone</option>
+    </select>
+
+    <label for="amount">Amount:</label>
+    <input type="number" name="amount" required min="1" placeholder="Recharge Amount">
+
+    <button type="submit">Recharge Now</button>
+  </form>
+
+</body>
+</html>

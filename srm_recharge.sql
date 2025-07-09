@@ -1,0 +1,1 @@
+-- SQL dump placeholder for wallet and recharge tables
